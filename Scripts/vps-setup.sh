@@ -2,8 +2,8 @@
 # This script will setup a VPS with all the configurations I would normally use.
 # It will also install all the necessary software.
 
-USER = "fox"
-GITHUB = "https://github.com/DownloadableFox"
+USERNAME="fox"
+GITHUB="https://github.com/DownloadableFox"
 
 # Check if running as root
 if [ "$(id -u)" != "0" ]; then
@@ -12,11 +12,11 @@ if [ "$(id -u)" != "0" ]; then
 fi
 
 # Create user fox and add to sudoers
-useradd -m -s /bin/bash $USER
-echo "$USER ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
+useradd -m -s /bin/bash $USERNAME
+echo "$USERNAME ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 
 # Create .ssh folder for the new user
-mkdir /home/$USER/.ssh
+mkdir /home/$USERNAME/.ssh
 
 # Check if curl is installed, if not exit
 if ! [ -x "$(command -v curl)" ]; then
@@ -25,10 +25,10 @@ if ! [ -x "$(command -v curl)" ]; then
 fi
 
 # Getting keys using curl
-curl -o /home/$USER/.ssh/authorized_keys ${GITHUB}.keys
-chown -R $USER:$USER /home/$USER/.ssh
-chmod 700 /home/$USER/.ssh
-chmod 600 /home/$USER/.ssh/authorized_keys
+curl -o /home/$USERNAME/.ssh/authorized_keys ${GITHUB}.keys
+chown -R $USERNAME:$USERNAME /home/$USER/.ssh
+chmod 700 /home/$USERNAME/.ssh
+chmod 600 /home/$USERNAME/.ssh/authorized_keys
 
 # if argument --disable-root or -d is passed, disable ssh root login
 if [ "$1" == "--disable-root" ] || [ "$1" == "-d" ]; then
