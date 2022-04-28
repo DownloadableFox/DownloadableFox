@@ -16,7 +16,7 @@ useradd -m -s /bin/bash $USERNAME
 echo "$USERNAME ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 
 # Create .ssh folder for the new user
-mkdir /home/$USERNAME/.ssh
+mkdir -p /home/$USERNAME/.ssh
 
 # Check if curl is installed, if not exit
 if ! [ -x "$(command -v curl)" ]; then
@@ -26,7 +26,7 @@ fi
 
 # Getting keys using curl
 curl -o /home/$USERNAME/.ssh/authorized_keys ${GITHUB}.keys
-chown -R $USERNAME:$USERNAME /home/$USER/.ssh
+chown -R $USERNAME:$USERNAME /home/$USERNAME/.ssh
 chmod 700 /home/$USERNAME/.ssh
 chmod 600 /home/$USERNAME/.ssh/authorized_keys
 
