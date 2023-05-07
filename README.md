@@ -1,4 +1,6 @@
-## Hewwo! I'm Luda :3
+## Hello! I am Luda (aka DownloadableFox)
+I am a developer with an interest in pretty much anything technology related.
+Here's some stats because why not lmao-
 ```sh
 $ sudo luda --version
 Luda CLI 1.0.0-CATSHOT LTS
