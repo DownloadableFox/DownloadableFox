@@ -11,9 +11,5 @@ While I try to experiment most languages out there, I am proficient with:
 - JavaScript/TypeScript
 - Java
 
-### Stats
-![Luda's GitHub Stats](https://github-readme-stats.vercel.app/api?username=DownloadableFox&show_icons=true&theme=radical)
-
-Here's some stats because why not lmao-
-Trying to be more active in GitHub, mostly want to help out my favorite projects.\
-(might actually try to make my own website for once)
+Finally **you should visit my website at https://downloadablefox.dev/**. \
+It's currently a work in progress, but I am constantly in development.
